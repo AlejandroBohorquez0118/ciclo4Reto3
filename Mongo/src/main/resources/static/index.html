@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/userFunctions.js"></script>
+</head>
+<body>
+    
+   
+    &nbsp;&nbsp;&nbsp;
+   <div class="container" style="width: 40%;" >
+    <div class="card" style="width: 90%;" id="cardLog">
+        <div class="card-body">
+          <h1 class="card-title"><center> Welcome to El Cacharrero</center></h1>
+          <center>
+            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+          </center>
+&nbsp;&nbsp;
+          <p class="card-text">Para ingresar por favor identificate con tu usuario y contraseña</p>
+
+          <form class="row g-3 needs-validation" novalidate>
+
+            <div id="liveAlertPlaceholderLog"></div>
+
+            <div class="col-md-12">
+              <label for="validationCustomUsername" class="form-label">Nombre de Usuario</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="userEmail" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                 
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+                <label for="validationCustomUsername" class="form-label">Contraseña</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">
+                      
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                        <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                    </svg>
+
+                  </span>
+                  <input type="password" class="form-control" id="userPass" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                   
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="bd-example">
+                
+                <button type="button" class="btn btn-secondary" onclick="valEmplyFlieldLog()">
+                  Ingresar
+                </button>
+
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                  Crear cuenta
+
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+
+                </button>
+
+              </div>
+
+          </form>
+         
+        </div>
+      </div>
+
+      
+    </div>
+
+
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">User creation Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <center>
+              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"></path>
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+              </svg>
+            </center>
+              &nbsp;
+
+              <div id="liveAlertPlaceholderHead"></div>
+
+              <div class="form-floating">
+                <input  class="form-control" id="IdentificationC" placeholder="Password">
+                <label for="floatingPassword">Identificacion</label>
+              </div>&nbsp;
+
+                  <div class="form-floating">
+                    <input  class="form-control" id="nameCreation" placeholder="Password">
+                    <label for="floatingPassword">Nombre</label>
+                  </div>&nbsp;
+
+                  <div class="form-floating">
+                    <input  class="form-control" id="AddressCreation" placeholder="Password">
+                    <label for="floatingPassword">Direccion</label>
+                  </div>&nbsp;
+                  
+                  <div class="form-floating">
+                    <input  class="form-control" id="CellphoneC" placeholder="Password">
+                    <label for="floatingPassword">Celular</label>
+                  </div>&nbsp;
+                  
+                  <div id="liveAlertPlaceholderEmail"></div>
+
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="correoCreation" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                  </div>
+              
+                  <div id="liveAlertPlaceholder"></div>
+              
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="password1" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                  </div>&nbsp;
+                  
+                  <div class="form-floating">
+                    <input type="password" class="form-control " id="password2" placeholder="Password">
+                    <label for="floatingPassword">Confirmar Contraseña</label>
+                  </div>&nbsp;
+                  
+                  <div class="form-floating">
+                    <input  class="form-control" id="ZoneC" placeholder="Password" required>
+                    <label for="floatingPassword">Zona</label>
+                  </div>&nbsp;
+                  
+                  <div class="form-floating">
+                    <input  class="form-control" id="TypeC" placeholder="Password">
+                    <label for="floatingPassword">Tipo</label>
+                  </div>&nbsp;
+                  
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-secondary" id="liveAlertBtn" onclick="valEmplyFlield()">Guardar cambios
+              
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save-fill" viewBox="0 0 16 16">
+                    <path d="M8.5 1.5A1.5 1.5 0 0 1 10 0h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h6c-.314.418-.5.937-.5 1.5v7.793L4.854 6.646a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l3.5-3.5a.5.5 0 0 0-.708-.708L8.5 9.293V1.5z"/>
+                  </svg>
+              
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
