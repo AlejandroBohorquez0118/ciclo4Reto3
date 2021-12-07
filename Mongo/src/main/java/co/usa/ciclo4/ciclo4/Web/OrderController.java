@@ -99,4 +99,11 @@ public class OrderController {
         return service.getZone(zone);
     
     }
+    
+    @PutMapping("/update")
+    public Order update(@RequestBody Order order){
+    
+        return service.update(order);
+    
+    }
 }

@@ -40,82 +40,39 @@ public class OrderService {
         return order;
         }
     }
-    /*
+    
     public Order update(Order order){
     
-        if(order.getId() != null){
+        if(order.getId() == null){
         
-        Optional<Order> orderExist = orderRepo.getOrderById(order.getId());
-        if(!orderExist.isEmpty()){
-        if(order.getRegisterDay()!= null){
+        return order;
         
-            orderExist.get().setRegisterDay(order.getRegisterDay());
-        
-        }
-        
-        if(order.getStatus()!= null){
-        
-            orderExist.get().setStatus(order.getStatus());
-        
-        }
-        
-        if(order.getSalesMan()!= null){
-        
-            orderExist.get().setSalesMan(order.getSalesMan());
-        
-        }
-        
-        if(order.getDescription()!= null){
-        
-            orderExist.get().setDescription(order.getDescription());
-        
-        }
-        
-        if(order.getMemory()!= null){
-        
-            orderExist.get().setMemory(order.getMemory());
-        
-        }
-        
-        if(clone.getHardDrive()!= null){
-        
-            cloneExist.get().setHardDrive(clone.getHardDrive());
-        
-        }
-        
-        if(clone.getPrice() != 0){
-        
-            cloneExist.get().setPrice(clone.getPrice());
-        
-        }
-        
-        if(clone.getQuantity()!= 0){
-        
-            cloneExist.get().setQuantity(clone.getQuantity());
-        
-        }
-        
-        if(clone.getPhotography()!= null){
-        
-            cloneExist.get().setPhotography(clone.getPhotography());
-        
-        }
-        
-        return orderRepo.save(orderExist.get());
-        }
-        else{
+        }else{
+            Optional<Order> orderExist = orderRepo.getOrderById(order.getId());
+            if(orderExist.isPresent()){
+                if(order.getStatus() != null){
+                
+                orderExist.get().setStatus(order.getStatus());
+                
+                }
+                return orderRepo.save(order);
+                }else{
                 
                 return order;
                 
                 }
-
-}else{
-    
-    return order;}
-    
+                
+                }
+                
+                }
         
-    }
-    */
+        
+        
+        
+    
+    
+    
+    
     public Integer deleteOrder(Integer id){
     Optional<Order> orderExist = orderRepo.getOrderById(id);
         
