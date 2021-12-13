@@ -3,7 +3,7 @@ function cargarDatosSalesMan() {
     let zona = localStorage.getItem("zona")
 
     $.ajax({
-        url: 'http://localhost:8080/api/order/zona/' + zona,
+        url: 'http://129.151.116.109:8080/api/order/zona/' + zona,
 
         type: 'GET',
         dataType: 'json',
@@ -65,7 +65,7 @@ var json2
 function verPedido(id) {
 
     $.ajax({
-        url: 'http://localhost:8080/api/order/' + id,
+        url: 'http://129.151.116.109:8080/api/order/' + id,
 
         type: 'GET',
         dataType: 'json',
@@ -183,7 +183,7 @@ console.log(var2)
         contentType: "application/json; charset=utf-8",
         dataType: 'JSON',
         data: JSON.stringify(var2),
-        url: "http://localhost:8080/api/order/update",
+        url: "http://129.151.116.109:8080/api/order/update",
         success: function (respose) {
           alert("funciono")
           pagListProd()
@@ -205,7 +205,7 @@ function funcionRechazar(id){
         contentType: "application/json; charset=utf-8",
         dataType: 'JSON',
         data: JSON.stringify(var2),
-        url: "http://localhost:8080/api/order/update",
+        url: "http://129.151.116.109:8080/api/order/update",
         success: function (respose) {
           alert("funciono")
           pagListProd()
@@ -227,7 +227,7 @@ function funcionPendiente(id){
         contentType: "application/json; charset=utf-8",
         dataType: 'JSON',
         data: JSON.stringify(var2),
-        url: "http://localhost:8080/api/order/update",
+        url: "http://129.151.116.109:8080/api/order/update",
         success: function (respose) {
           alert("funciono")
           pagListProd()

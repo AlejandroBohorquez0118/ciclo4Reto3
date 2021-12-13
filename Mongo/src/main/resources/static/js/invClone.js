@@ -2,7 +2,7 @@ function cargarDatosProductos() {
 
 
     $.ajax({
-        url: 'http://localhost:8080/api/clone/all',
+        url: 'http://129.151.116.109:8080/api/clone/all',
 
         type: 'GET',
         dataType: 'json',

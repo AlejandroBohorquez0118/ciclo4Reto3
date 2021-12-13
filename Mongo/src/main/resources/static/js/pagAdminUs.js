@@ -3,7 +3,7 @@ function cargarDatos(){
     
 
     $.ajax({    
-            url : 'http://localhost:8080/api/user/all',
+            url : 'http://129.151.116.109:8080/api/user/all',
         //  data : { id : 123 },
             type : 'GET',
             dataType : 'json',
@@ -90,7 +90,7 @@ function borrarUsuario(id){
             data : dataToSend,
             
            
-            url : "http://localhost:8080/api/user/"+id,
+            url : "http://129.151.116.109:8080/api/user/"+id,
             type: 'DELETE',
             contentType:'application/json',
             success : function(json, textStatus, xhr) {
@@ -112,7 +112,7 @@ function ObtenerDatos(id){
       window.dataToSend=JSON.stringify(id);
 
     $.ajax({    
-        url : 'http://localhost:8080/api/user/'+window.dataToSend,
+        url : 'http://129.151.116.109:8080/api/user/'+window.dataToSend,
     //  data : { id : 123 },
         type : 'GET',
         dataType : 'json',
@@ -237,7 +237,7 @@ function confirmEmail(){
 
 $.ajax({    
 
-  url: 'http://localhost:8080/api/user/emailexist/'+userEmail,
+  url: 'http://129.151.116.109:8080/api/user/emailexist/'+userEmail,
   
   type: 'GET',
   dataType : 'JSON',
@@ -299,7 +299,7 @@ function guardarCambios(){
        
         data: dataToSend,
         
-        url: 'http://localhost:8080/api/user/update',
+        url: 'http://129.151.116.109:8080/api/user/update',
         
         type: 'PUT',
         contentType:'application/json',

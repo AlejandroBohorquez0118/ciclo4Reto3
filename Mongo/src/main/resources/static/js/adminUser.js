@@ -1,5 +1,5 @@
 function listaOrdenes() {
-    $("#containerPag").load("http://localhost:8080/listaZona.html", function (data) {
+    $("#containerPag").load("http://129.151.116.109:8080/listaZona.html", function (data) {
         $(this).html(data);
     })
    
@@ -8,14 +8,14 @@ function listaOrdenes() {
 }
 
 function pagListProd() {
-    $("#containerPag").load("http://localhost:8080/invClone.html", function (data) {
+    $("#containerPag").load("http://129.151.116.109:8080/invClone.html", function (data) {
         $(this).html(data);
     })
     cargarDatosProductos()
 }
 
 function pagAdminProd() {
-    $("#containerPag").load("http://localhost:8080/adminClone.html", function (data) {
+    $("#containerPag").load("http://129.151.116.109:8080/adminClone.html", function (data) {
         $(this).html(data);
     })
     cargarDatosProductos()
@@ -25,7 +25,7 @@ function pagAdminProd() {
 function cargarPerfil() {
     console.log("se ejecula cargar perfil")
     $.ajax({
-        url: 'http://localhost:8080/api/user/all',
+        url: 'http://129.151.116.109:8080/api/user/all',
 
         type: 'GET',
         dataType: 'json',
@@ -83,7 +83,7 @@ function cargarPerfil() {
                 let verif = document.getElementById("verificacion")
                 verif.style.display="none"
                 alert("usuario no verificado, por favor ingrese nuevamente")
-                location.href="http://localhost:8080/"
+                location.href="http://129.151.116.109:8080/"
 
             }
 
@@ -97,7 +97,7 @@ function cargarPerfil() {
 function salir() {
 
     localStorage.clear()
-    location.href="http://localhost:8080/"
+    location.href="http://129.151.116.109:8080/"
 
 
 }

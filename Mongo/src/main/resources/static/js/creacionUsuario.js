@@ -177,7 +177,7 @@ function verEmailU(){
 
     $.ajax({    
 
-        url: 'http://localhost:8080/api/user/emailexist/'+userEmailVerU,
+        url: 'http://129.151.116.109:8080/api/user/emailexist/'+userEmailVerU,
         
         type: 'GET',
         dataType : 'JSON',
@@ -269,7 +269,7 @@ function saveUserU(){
         contentType:"application/json; charset=utf-8",
         dataType: 'JSON',
         data: JSON.stringify(var2),
-        url:"http://localhost:8080/api/user/new",
+        url:"http://129.151.116.109:8080/api/user/new",
         success:function(respose) {
             //alert("se guardo satisfactoriamente")
             console.log(respose);
@@ -289,7 +289,7 @@ function saveUserU(){
     function creacionId(){
 
         $.ajax({    
-            url : 'http://localhost:8080/api/user/all',
+            url : 'http://129.151.116.109:8080/api/user/all',
         //  data : { id : 123 },
             type : 'GET',
             dataType : 'json',

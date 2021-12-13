@@ -4,7 +4,7 @@ function cargarDatosProductos() {
 
 
   $.ajax({
-    url: 'http://localhost:8080/api/clone/all',
+    url: 'http://129.151.116.109:8080/api/clone/all',
 
     type: 'GET',
     dataType: 'json',
@@ -157,7 +157,7 @@ function imprimirOrden() {
   for (i = 0; i < pedido.length; i++) {
 
     $.ajax({
-      url: 'http://localhost:8080/api/clone/' + pedido[i],
+      url: 'http://129.151.116.109:8080/api/clone/' + pedido[i],
       //  data : { id : 123 },
       type: 'GET',
       dataType: 'json',
@@ -217,7 +217,7 @@ var compra = {}
 function verificarOrden() {
 
   $.ajax({
-    url: 'http://localhost:8080/api/order/all',
+    url: 'http://129.151.116.109:8080/api/order/all',
     //  data : { id : 123 },
     type: 'GET',
     dataType: 'json',
@@ -236,7 +236,7 @@ function verificarOrden() {
       for (i = 0; i < pedido.length; i++) {
 
         $.ajax({
-          url: 'http://localhost:8080/api/clone/' + pedido[i],
+          url: 'http://129.151.116.109:8080/api/clone/' + pedido[i],
 
           type: 'GET',
           dataType: 'json',
@@ -264,7 +264,7 @@ var perfil
 function verificarAsesor(compra) {
 
   $.ajax({
-    url: 'http://localhost:8080/api/user/' + localStorage.id,
+    url: 'http://129.151.116.109:8080/api/user/' + localStorage.id,
 
     type: 'GET',
     dataType: 'json',
@@ -328,7 +328,7 @@ function envioOrden(fecha) {
     contentType: "application/json; charset=utf-8",
     dataType: 'JSON',
     data: JSON.stringify(var2),
-    url: "http://localhost:8080/api/order/new",
+    url: "http://129.151.116.109:8080/api/order/new",
     success: function (respose) {
       let barraAlerta = $("#alertaOrden")
       barraAlerta.innerHTML = "";
