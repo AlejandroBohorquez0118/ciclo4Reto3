@@ -24,4 +24,8 @@ public interface OrderCrudRepository extends MongoRepository<Order, Integer> {
     //public List<Order> findByStatus(String status);
     
     //public List<Order> findByQuantitiesAndSalesMan(String);
+    
+    public List<Order> findBySalesMan_Id(Integer id);
+    
+    //public List<Order> findBySalesMan_Zone(Str);
 }

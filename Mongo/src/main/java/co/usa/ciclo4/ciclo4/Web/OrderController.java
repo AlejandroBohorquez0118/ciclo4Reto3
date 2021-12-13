@@ -106,4 +106,12 @@ public class OrderController {
         return service.update(order);
     
     }
+    
+    
+    @GetMapping("/salesman/{id}")
+    public List<Order> getBySalesManId(@PathVariable Integer id){
+    
+    return service.findBySalesManId(id);
+    
+    }
 }

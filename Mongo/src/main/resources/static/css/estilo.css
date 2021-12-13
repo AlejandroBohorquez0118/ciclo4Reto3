@@ -1,0 +1,56 @@
+body{
+
+background-image: url(http://k41.kn3.net/taringa/2/4/1/9/1/2/30/dj-tavor/CDC.jpg);
+
+}
+
+.card{
+
+opacity: 0.9;
+border-radius: 20px;
+
+}
+
+#head{
+
+margin-left:15%;
+
+border-color: transparent;
+margin-right: 10%;
+margin: auto;
+border-radius: 100%;
+opacity: 0.9;
+}
+
+#Logo{
+
+   width: 100%;
+   height: 120%;
+}
+
+#BotonPerfil{
+ 
+   margin-left: 45%;
+   
+}
+
+#BarraPerfil{
+
+   width: 60%;
+
+}
+
+.Cantidad{
+
+   width: 30px;
+   text-align: center;
+   background-color: white;
+
+}
+
+#containerPag{
+
+   max-width: max-content;
+
+
+}

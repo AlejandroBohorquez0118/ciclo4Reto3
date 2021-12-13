@@ -56,5 +56,12 @@ public class OrderRepository {
 //        return orderCrud.findByStatus(status);
 //    
 //    }
+    
+    public List<Order> findBySalesManId(Integer id){
+    
+    
+        return orderCrud.findBySalesMan_Id(id);
+    
+    }
 }
 

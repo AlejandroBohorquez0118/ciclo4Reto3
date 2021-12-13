@@ -48,6 +48,12 @@ public class UserController {
 
     }
     
+    /**
+     * 
+     * @param id
+     * @return 
+     */
+    
     @GetMapping("/{id}")
     public Optional<User> getUserById(@PathVariable int id){
     
@@ -95,6 +101,11 @@ public class UserController {
 
     }
     
+    /**
+     * 
+     * @param user
+     * @return 
+     */
     
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
@@ -104,6 +115,11 @@ public class UserController {
     
     }
     
+    /**
+     * 
+     * @param id
+     * @return 
+     */
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public Integer delete(@PathVariable Integer id){

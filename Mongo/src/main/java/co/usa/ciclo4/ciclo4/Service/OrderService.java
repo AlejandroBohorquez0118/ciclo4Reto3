@@ -55,7 +55,7 @@ public class OrderService {
                 orderExist.get().setStatus(order.getStatus());
                 
                 }
-                return orderRepo.save(order);
+                return orderRepo.save(orderExist.get());
                 }else{
                 
                 return order;
@@ -112,5 +112,12 @@ public class OrderService {
 //    
 //    }
 //    
+    
+    
+    public List<Order> findBySalesManId(Integer id){
+    
+        return orderRepo.findBySalesManId(id);
+    
+    }
 }
 
