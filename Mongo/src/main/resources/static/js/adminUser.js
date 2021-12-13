@@ -75,7 +75,7 @@ function cargarPerfil() {
                <td>${tipo}
                <td>${zona}
                 `
-            contador += 1;
+            
 
             $("#Perfil").append(tabla + "</table>")
             if(identificacion == null){
